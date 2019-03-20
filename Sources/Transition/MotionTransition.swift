@@ -207,7 +207,7 @@ extension Motion {
    */
   public class func animate(group animations: [CAAnimation], timingFunction: CAMediaTimingFunction = .easeInOut, duration: CFTimeInterval = 0.5) -> CAAnimationGroup {
     let group = CAAnimationGroup()
-    group.fillMode = MotionAnimationFillModeToValue(mode: .both)
+    group.fillMode = CAMediaTimingFillMode(rawValue: MotionAnimationFillModeToValue(mode: .both))
     group.isRemovedOnCompletion = false
     group.animations = animations
     group.duration = duration

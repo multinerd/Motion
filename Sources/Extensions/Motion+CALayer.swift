@@ -322,7 +322,7 @@ fileprivate extension CALayer {
       }
       
       let g = Motion.animate(group: anims, duration: duration)
-      g.fillMode = MotionAnimationFillModeToValue(mode: .both)
+        g.fillMode = CAMediaTimingFillMode(rawValue: MotionAnimationFillModeToValue(mode: .both))
       g.isRemovedOnCompletion = false
       g.timingFunction = ts.timingFunction
       

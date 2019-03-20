@@ -40,12 +40,12 @@ public enum MotionAnimationFillMode: Int {
 public func MotionAnimationFillModeToValue(mode: MotionAnimationFillMode) -> String {
   switch mode {
   case .forwards:
-    return kCAFillModeForwards
+    return CAMediaTimingFillMode.forwards.rawValue
   case .backwards:
-    return kCAFillModeBackwards
+    return CAMediaTimingFillMode.backwards.rawValue
   case .both:
-    return kCAFillModeBoth
+    return CAMediaTimingFillMode.both.rawValue
   case .removed:
-    return kCAFillModeRemoved
+    return CAMediaTimingFillMode.removed.rawValue
   }
 }
